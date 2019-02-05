@@ -11,13 +11,13 @@ matrix:
   include:
     -
       env: TRAVIS_PYTHON_VERSION="3.5"
-      script: pytest -d --tx popen//python=3.5
+      script: pytest -d --tx popen//python=python3.5
     - 
       env: TRAVIS_PYTHON_VERSION="3.6"
-      script: pytest -d --tx popen//python=3.6
+      script: pytest -d --tx popen//python=python3.6
     - 
       env: TRAVIS_PYTHON_VERSION="3.7"
-      script: pytest -d --tx popen//python=3.7
+      script: pytest -d --tx popen//python=python3.7
 notifications:
   email:
     on_success: never
