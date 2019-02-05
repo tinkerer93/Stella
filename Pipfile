@@ -4,12 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-pytest-xdist = "*"
+pytest-cov = "*"
 
 [packages]
 requests = "*"
 flask = "*"
 dropbox = "*"
+postgresql = "*"
 
 
 [requires]
