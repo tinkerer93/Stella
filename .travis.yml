@@ -8,7 +8,7 @@ install:
   - pipenv install --dev
   - pip install pytest-xdist
 script:
-  - pytest -d --tx popen//python=$TRAVIS_PYTHON_VERSION
+  - pytest -d --tx popen//python=concat("python", $TRAVIS_PYTHON_VERSION)
 notifications:
   email:
     on_success: never
