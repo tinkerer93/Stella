@@ -1,24 +1,17 @@
 language: python
-python:
-  - 3.5
-  - 3.6
-  - 3.7
 matrix:
   include:
     - python: 3.5
     - python: 3.6
     - python: 3.7
-    dist: xenial
-    sudo: true
+      dist: xenial
+      sudo: true
 install:
   - pip install pipenv
   - pipenv install --dev
-  - pip install pytest-xdist
+  - pip install pytest-cov
 script:
-  - |
-    if ["$TRAVIS_PYTHON_VERSION" = "3.5"]; then pytest -d --tx popen//python=python3.5; fi
-    elif ["$TRAVIS_PYTHON_VERSION" = "3.6"]; then pytest -d --tx popen//python=python3.6; fi
-    elif ["$TRAVIS_PYTHON_VERSION" = "3.7"]; then pytest -d --tx popen//python=python3.7; fi
+  - pytest --cov=./elementary_tasks/tests
 notifications:
   email:
     on_success: never
