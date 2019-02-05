@@ -6,3 +6,7 @@ install:
   - pipenv install --dev
 script:
   - pytest
+os:
+  - windows
+  - linux
+  - osx
